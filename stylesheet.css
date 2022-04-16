@@ -17,6 +17,10 @@ h2{
    font-size:75px;
    padding:0% 10% 7%;
 }
+h5{
+    font-family:"montserret", sans-seriff;
+    font-size:70px;
+}
 /******class********/
 .logo-container{
     padding-left: 5%;
@@ -61,16 +65,29 @@ h2{
 }
 .popup{
   position:absolute;
-  top:50%;
+  top:-150%;
   left:50%;
+  opacity:0;
+  transform:translate(-50%,-50%) scale(1,25);
   margin-top: 20%;
-  transform:translate(-50%,-50%);
   width:380px;
   padding:20px 30px;
   background:#fff;
   box-shadow:2px 2px 5px 5px rgba(0,0,0,0.15);
   border-radius:10px;
+    transiton:top 0ms ease-in-out 200ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 20ms ease-in-out 0ms;
+              
 }
+.popup .active{
+    top:50%;
+    opacity:1;
+    transform:translate(-50%,-50%0 scale(1);
+    transiton:top 0ms ease-in-out 0ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 20ms ease-in-out 0ms;
+        }
 .popup .close-btn{
   position:absolute;
   top:10px;
